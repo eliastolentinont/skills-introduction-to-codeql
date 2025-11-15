@@ -54,11 +54,25 @@ The **Common Weakness Enumeration (CWE)** is a category system for hardware and 
 
 1. Notice the audit trail provides the source of the vulnerability and shows that it came from our pull request.
 
-### ⌨️ Activity: Dismiss and Reopen an Alert
+### ⌨️ Activity: Add Comments to Alerts
+
+One of the key features of Code scanning alerts is the ability to add comments when managing them. Comments provide context, document decisions, and create an audit trail for security issues.
+
+#### How to Add Comments to Code Scanning Alerts
+
+There are several ways to add comments to code scanning alerts:
+
+1. **When dismissing an alert**: You can add a comment explaining why you're dismissing it (e.g., false positive, risk accepted, used in tests).
+2. **In pull requests**: Code scanning alerts appear in PR conversations where you can discuss them with your team.
+3. **Via REST API**: For automated workflows, you can programmatically add comments using GitHub's API.
+
+Let's practice adding comments by dismissing and reopening an alert with explanatory text.
+
+### ⌨️ Activity: Dismiss and Reopen an Alert with Comments
 
 1. In the top right, click **Dismiss alert** dropdown.
 
-1. Select the `Used in tests` option and enter the below description.
+1. Select the `Used in tests` option and enter the below comment in the description field.
 
    ```md
    This is a playground repository for learning about CodeQL alerts.
@@ -66,10 +80,12 @@ The **Common Weakness Enumeration (CWE)** is a category system for hardware and 
 
    <img width="300" alt="dismiss alert options" src="https://github.com/user-attachments/assets/7be133a7-3f20-4bf3-8073-383eb1cce359" />
 
+   > 💡 Tip: This description becomes a **comment** on the alert, visible in the audit trail.
+
 1. Click the **Dismiss alert** button.
 
    - The alert state will change to `Dismissed`.
-   - A read-only entry was added with the description to the audit trail showing who closed it.
+   - A read-only entry was added with your comment to the audit trail showing who closed it and why.
 
    <img width="300" alt="audit log entry showing alert dismissed" src="https://github.com/user-attachments/assets/afdd6e11-d4c9-466c-82d4-622c96e039a3" />
 
@@ -77,6 +93,8 @@ The **Common Weakness Enumeration (CWE)** is a category system for hardware and 
 
    - The alert state will change back to `Open`.
    - A read-only entry was added to the audit trail showing who opened it.
+
+   > 💡 Tip: Comments on alerts are permanent and provide valuable context for security audits and team collaboration.
 
 1. With an alert closed and reopened, add a comment to this issue asking Mona to check our progress and share the next steps.
 

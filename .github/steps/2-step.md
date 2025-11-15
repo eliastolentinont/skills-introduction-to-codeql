@@ -46,6 +46,8 @@ To see how Code Scanning works, we will introduce a vulnerability into the `rout
    <img width="500" alt="code scan results" src="https://github.com/user-attachments/assets/1914befe-e091-4905-bfdc-a5a252a73d2d" />
 
    > 💡 Tip: Clicking the **Show paths** link will provide additional insights about the alert's data flow from user input (source), through the application, and when it is acted on (sink).
+   
+   > 💡 Tip: **Adding comments in pull requests**: Code scanning alerts appear as comments in the pull request conversation. You and your team can discuss these alerts, ask questions, and collaborate on fixes directly in the PR, just like regular code review comments. This makes it easy to address security issues as part of your normal development workflow.
 
 ### ⌨️ Activity: View the CodeQL scanning logs
 
